@@ -4,7 +4,13 @@
 <div>
     <ul>
         <li>{{this.author}}</li>
-        <li>{{course_name}}</li>
+        <li>{{this.course_name}}</li>
+        <img src="public/img/{{this.img}}" alt="">
+
+        <form action="/details/{{this.course_id}}" method="POST">
+            <input type="submit" value="Course Details" />
+        </form>
+
     </ul>
 </div>
 
