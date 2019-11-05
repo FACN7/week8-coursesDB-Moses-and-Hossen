@@ -1,0 +1,28 @@
+{
+  "name": "week8-coursesDB-Moses-and-Hossen",
+  "version": "1.0.0",
+  "description": "This project gonna be about courses catalog - uses by postgresql node js with express and handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:watch": "nodemon -q src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN7/week8-coursesDB-Moses-and-Hossen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN7/week8-coursesDB-Moses-and-Hossen/issues"
+  },
+  "homepage": "https://github.com/FACN7/week8-coursesDB-Moses-and-Hossen#readme",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "nodemon": "^1.19.4",
+    "pg": "^7.12.1"
+  }
+}
