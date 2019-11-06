@@ -6,7 +6,7 @@ const app = express();
 const routes = require('./routes/index');
 //const helpers = require('./views/helpers/index');
 
-//app.use(express.static(path.join(__dirname, '..', 'public')));
+
 
 app.use('/public', express.static('public'));
 
@@ -32,6 +32,7 @@ app.engine(
 
 
 app.set('port', process.env.PORT || 3000);
+//app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(routes);
 
 module.exports = app;
