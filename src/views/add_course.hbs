@@ -1,0 +1,35 @@
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td><label for="">Course name:</label></td>
+            <td><input type="text" name="Course_name" placeholder="Course name "></td>
+        </tr>
+        <tr>
+            <td><label for="">course Details:</label></td>
+            <td><textarea name="course_details" cols="30" rows="10" placeholder="Type description here"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="">author:</label></td>
+            <td><input type="text" name="author" placeholder="Author Name"></td>
+        </tr>
+        <tr>
+            <td><label for="">Photo:</label></td>
+            <td> <input type="file" name="pic" accept="public/img/*"></td>
+            {{#if (checkFileType msg) }}
+        <tr>
+            <td>
+                <h3>{{msg}}</h3>
+            </td>
+        </tr>
+
+        {{/if}}
+        </tr>
+        <tr>
+            <td><label for="">Link:</label></td>
+            <td><input type="text" placeholder="https://www.udemy.com/xxx/xxx"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Add Course"></td>
+        </tr>
+    </table>
+</form>

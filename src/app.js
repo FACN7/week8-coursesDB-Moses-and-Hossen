@@ -4,7 +4,13 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 const routes = require('./routes/index');
-//const helpers = require('./views/helpers/index');
+const helpers = require('./views/helpers/index');
+
+
+
+
+
+
 
 
 
@@ -23,8 +29,8 @@ app.engine(
         extname: 'hbs',
         layoutsDir: path.join(__dirname, 'views', 'layouts'),
         partialsDir: path.join(__dirname, 'views', 'partials'),
-        defaultLayout: 'main'
-        //helpers: helpers,
+        defaultLayout: 'main',
+        helpers
 
     })
 );
@@ -35,4 +41,6 @@ app.set('port', process.env.PORT || 3000);
 //app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(routes);
 
-module.exports = app;
+module.exports = {
+    app
+}
