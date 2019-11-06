@@ -1,6 +1,7 @@
 const express = require('express');
 const { catalog_lists } = require('../queries/catalog');
 const { details } = require('../queries/details');
+const { remove_course } = require('../queries/remove');
 
 const router = express.Router();
 
@@ -12,6 +13,13 @@ router.get('/home', (req, res) => {
         })
         .catch(err => console.log('catalog err:', err))
 });
+
+router.get('/remove/:id', (req, res) => {
+    remove_course(req.params.id).then(result => {
+        console.log(result);
+        res.redirect('/home');
+    }).catch(err => console.log('remove err:', err));
+})
 
 router.post('/details/:id', (req, res) => {
     details(req.params.id).then(result => {

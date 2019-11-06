@@ -5,7 +5,10 @@
     <ul>
         <li>{{this.author}}</li>
         <li>{{this.course_name}}</li>
-        <img src="public/img/{{this.img}}" alt="">
+        <div>
+            <a class="remove_btn" href="/remove/{{this.course_id}}">Remove</a>
+        </div>
+        <img src="/public/img/{{this.img}}" alt="">
 
         <form action="/details/{{this.course_id}}" method="POST">
             <input type="submit" value="Course Details" />
@@ -15,4 +18,7 @@
 </div>
 
 
+
 {{/each}}
+
+<script src="/public/js/home.js"></script>
