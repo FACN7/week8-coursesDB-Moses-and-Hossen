@@ -1,5 +1,43 @@
-<div>
+{{!-- 
+<div class="courseDetailsContainer">
+    <div class="courseDetails">
     <p>{{description.course_details}}</p>
+    </div>
     <img src="/public/img/{{description.img}}" alt="">
     <a href="{{description.link}}">ROLL</a>
+</div>
+
+ --}}
+
+
+
+
+
+
+
+{{!-- 
+<h2>Round Card</h2>
+
+<div class="card">
+  <img src="/public/img/{{description.img}}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Jane Doe</b></h4> 
+    <p>Interior Designer</p> 
+  </div>
+</div> --}}
+
+
+{{!-- <h2 style="text-align:center"> By : Product Card</h2> --}}
+
+<div class="card">
+  <img src="/public/img/{{description.img}}" alt="{{description.author}}" style="width:100%">
+  <h1>{{description.course_name}}</h1>
+  <p class="price">$14.99</p>
+  <div class="descriptionCorDitails" style="padding: 5px;">
+  <p>{{description.course_details}}</p>
+</div>
+<form action="{{description.link}}">
+  <p><button href="{{description.link}}" style="  font-weight: bold; ">ROLL</button></p>
+</form>
+
 </div>
