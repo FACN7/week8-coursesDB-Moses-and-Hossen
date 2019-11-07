@@ -12,9 +12,13 @@
           
       </div>
 
-<a href="/add_course">Add a new course</a>
+<div>
+<a  style="font-size: 1.5rem;font-weight:bold;" href="/add_course">Add a new course</a>
 
 <input type="submit" id="submit" onclick="window.location.href='/add_course'" value="+">
+
+</div>
+
 {{!-- <div class="plusSign" style="margin-top: 7px;"> --}}
   {{!-- <button> d</button> --}}
 {{!-- <div class="plus radius">
@@ -33,4 +37,43 @@
 <h1 style="text-align: center;font-size:4rem">THe best Courses Of the year!</h1>
 
 <div class="coursesCatalog" >
+{{#each result}}
+<div class="courseCardContainer">
+
+<div class="courseCard">
+    <ul>
+       
+        <div class="btnFather">
+            <a class="remove_btn" href="/remove/{{this.course_id}}">✘</a>
+        </div>
+        <img src="/public/img/{{this.img}}" class="CourseImg" alt="">
+
+ <li class="authorName">{{this.author}}</li>
+        <li>{{this.course_name}}</li>
+        
+        <form action="/details/{{this.course_id}}"  class="CourseDetailsBtnFather"  method="POST">
+            <input type="submit" class="CourseDetailsBtn" value="Course Details" />
+        </form>
+
+    </ul>
+</div>
+
+
+
+{{!-- <div class="courseDetailsContainer">
+    <div class="courseDetails">
+    <p>{{this.course_details}}</p>
+    </div>
+    <img src="/public/img/{{this.img}}" alt="">
+    <a href="{{this.link}}">ROLL</a>
+</div> --}}
+
+
+</div>
+
+{{/each}}
+
+
+
+</div>
 <script src="/public/js/home.js"></script>
