@@ -1,8 +1,9 @@
+<div class="formContainer" style="display:flex;justify-content:center;background: cadetblue;width:30rem; height:30rem; border-radius: 2%;">
 <form action="/upload" method="POST" enctype="multipart/form-data">
-    <table>
+    <table style="display: flex;">
         <tr>
             <td><label for="">Course name:</label></td>
-            <td><input type="text" name="Course_name" placeholder="Course name "></td>
+            <td><input type="text" name="Course_name"  placeholder="Course name "></td>
         </tr>
         <tr>
             <td><label for="">course Details:</label></td>
@@ -28,8 +29,11 @@
             <td><label for="">Link:</label></td>
             <td><input type="text" placeholder="https://www.udemy.com/xxx/xxx"></td>
         </tr>
-        <tr>
-            <td><input type="submit" value="Add Course"></td>
+        <tr style=" display:flex; justify-content: center;">
+            <br>
+            <td><input class="CourseDetailsBtn" type="submit" value="Add Course" style="margin-top: 2rem;"></td>
         </tr>
     </table>
 </form>
+
+</div>
